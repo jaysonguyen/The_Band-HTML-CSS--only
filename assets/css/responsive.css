@@ -1,0 +1,139 @@
+@media (max-width: 46.175em)
+{
+    .s-col-full
+    {
+        width: 100% !important;
+    }
+    .s-full-width
+    {
+        width: 100% !important;
+    }
+    .mt-16
+    {
+        margin-top: 16px !important;
+    }
+    .mt-8
+    {
+        margin-top: 8px !important;
+    }
+    .textCenter
+    {
+        text-align: center;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav > li:first-child
+    {
+        display: inline-block;
+    }
+    #nav
+    {
+        display: block;
+    }
+    #nav li a
+    {
+        display: block;
+        padding: 2px 24px;
+    }
+    #nav .subnav
+    {
+        position: initial;
+        background-color: #333;      
+    }
+    #nav .subnav a
+    {
+        color: #fff;
+        padding: 2px 40px;
+    }
+    #header
+    {
+        overflow: hidden;
+    }   
+    .search-button
+    {
+        display: none;
+    }
+    .mobile-member-content
+    {  
+       margin-top: 30px;
+    }
+    #content .member-name
+    {
+        margin-bottom: 0;
+    }
+    #content .member-img
+    {
+        width: 60%;
+    }
+    .col
+    {
+     float: initial;     
+    }   
+    .col.two-col.contact-inf 
+    {
+        margin-bottom: 12px;
+    }
+
+    .text-description
+    {
+        margin-bottom: -19px;
+    }
+    .text-heading
+    {
+        margin-bottom: 8px;
+    }
+    .contact-form
+    {
+        margin-top: 32px;
+    }
+    .contact-submit-btn
+    {
+        font-size: 16px;
+        -webkit-appearance: none;
+    }
+}
+ @media (min-width: 63em)
+ {
+     .mobile-menu-button
+     {
+         display: none;
+     }
+ }
+ @media (max-width: 63.9375em)
+ {
+    .buy-ticket 
+    {
+        padding: 15px 16px;
+    }
+    .form-ctrl
+    {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .footer-icon a
+    {
+        padding: 15px;
+        font-size: 45px;
+    }
+    .copyRight
+    {
+        padding:45px;
+    }
+    #nav .subnav a
+    {
+        padding: 5px 10px;
+    }
+    .contact-inf 
+    {
+        line-height: 2.0;
+    }
+ }
+
+ @media (max-width: 63.9375em) and (min-width: 46.25em  )
+ {
+    .mobile-menu-button
+    {
+        display: none;
+    }
+}

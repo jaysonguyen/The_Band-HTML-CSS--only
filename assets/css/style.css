@@ -1,0 +1,563 @@
+/* Reset CSS */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+1. (Làm từ trên xuống dưới)
+2. (Từ ngoài vào trong)
+3. (từ tổng quan đén chi tiết)
+
+1.Vi trí
+2. Kích thước
+3. Màu sắc
+4. Font chữ, hình dáng
+/* Global */
+.rows
+{   
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.rows::after
+{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col
+{
+    float:left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.two-col
+{
+    width: 50%;
+}
+.three-col
+{
+    width:33.3333%;
+}
+.fully-col
+{
+    width: 100%;
+}
+.text-center
+{
+    text-align: center !important;
+}
+
+
+/* Main */
+ */
+#main{
+    /* Bat ky the con nao chui ra khoi the cha se bi an di */
+    /* overflow: hidden; */
+    background-color: rgba(255,255,255,0);
+    position: relative;
+
+}
+.clear
+{
+    clear: both;
+}
+/* HEADER */
+#header{   
+   height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    /* Phan noi tren cua fixed */
+    position: fixed;
+}
+
+#nav
+{
+    display: inline-block;
+}
+#nav > li
+{
+    display: inline-block;
+    /* lop cha */
+}
+#nav li 
+{
+    position: relative;
+}
+#nav li a{
+    text-decoration: none;
+    /* Cho khoan cach bang voi box chua no */
+    line-height: 46px;
+    padding: 0px 24px;
+    /* Tao cac a thanh 1 hang ngang 
+    Block ke thua khoang khong gian ngang chua no*/
+    display: inline-block;
+}
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+
+}
+#nav .nav-arrow-down
+{
+    font-size: 12px;
+}
+#header .mobile-menu-button,
+#header .search-button
+{
+    /* Khi mot <div> duoc tao ra no se ke thua toan bo khong gian
+    khi co mot the float do se de` len lam` mat tinh ke thua do */
+    float: right;  
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header .search-button:hover
+{
+    background-color: tomato;
+     /* Thay doi hinh dang cua con tro chuot */
+     cursor: pointer;
+}
+#header .mobile-menu-button:hover .mobile-menu-icon
+{
+    background-color: #ccc;
+    color: black;
+}
+#header .mobile-menu-icon,
+#header .search-icon
+{
+    color: white;
+    font-size: 27px;
+    /* Dung de canh chinh do dai cua "ky tu" co trong 1 box  */
+    line-height: 46px;
+    padding: 0 21px;
+}
+
+#nav .subnav
+{
+    display: none; 
+    /* Lop con */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;   
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-width: 160px;
+    
+}
+#nav .subnav a
+{
+    color: #000;
+    display: block;
+    padding: 0 15px;
+    line-height: 38px;
+
+}
+/* Tao hover cho lop thu 1  */
+#nav > li:hover > a,
+#nav .subnav li:hover  a
+{
+    color: #000;
+    background-color: #ccc;
+    
+}
+#nav li:hover .subnav
+{
+    display: block;
+}
+
+#nav, .subnav
+{
+    list-style: none;
+}
+/* SLIDER */
+ #slider{
+    margin-top: 46px;
+    /* padding-top: 50% 
+    50% nay la 50% ti le width cua chinh no 
+    */
+    text-align: center;
+    padding-top: 50%;
+    /* backgroug: url() tri tri / size  no-repeat */
+    background: url('../img/slider_img.jpg') top center/cover no-repeat;
+    position: relative;
+    
+} 
+.text-container{
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    /* width dung de can giua
+    cach 1: width 100%
+    cach 2:transform: tranlateX(-50%)
+    */
+    width: 100%;
+    margin-bottom: 47px;
+    text-shadow: 0 0 2px black;
+
+}
+
+.text-heading{
+    margin-bottom: 25px;
+}
+/* CONTENT */
+#content .content-section
+{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .text-header 
+{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 5px;
+    
+}
+#content .text-subheader
+{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    /* Do trong suot giu lai 60% */
+    opacity: 0.6;
+}
+#content .text-about
+{
+    margin-top: 25px;
+    line-height: 22px;
+    text-align: justify;
+    font-size: 15px;
+}
+#content .members
+{
+    margin-top: 48px;
+}
+#content .member-img
+{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+#content .member-name
+{
+    font-size: initial;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* TOUR-DATE */
+.tour-date
+{
+    background-color: #000;
+    color: white !important;
+}
+.ticket-list
+{
+    margin-top: 40px;
+    background: white;
+    color: #000;
+}
+.ticket-list li
+{
+    color: #757575;
+    list-style: none;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.ticket-list .sold-out
+{
+    padding: 3px 4px;
+    border-radius: 1px;
+    margin-left: 16px;
+    background: #f44336;
+    color: #fff;
+}
+.ticket-list .quantity
+{   
+    float: right;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    background: #000;
+    color: white;
+    margin-top: -3px;
+}
+/* PLACE */
+.places-list{
+    margin-top: 32px;
+
+}
+.place-img
+{
+    width: 100%;
+    display: block;
+
+}
+.place-img:hover
+{
+    opacity: 0.6;
+}
+.place-inf
+{   
+    background: white;
+    color: black;
+    padding: 16px;
+    font-size: 15px;
+    padding-bottom: 35px;
+}
+.head-inf
+{
+    font-size: 15px;
+    font-weight: 670;
+}
+.place-time
+{
+    margin: 16px 0;
+    color: #757575;
+}
+.place-desc
+{   
+    line-height: 16px;
+}
+.buy-ticket
+{
+    text-decoration: none;
+    background-color: #000;
+    color: white;
+    padding: 11px 16px;/* xu ly padding de` len tren  */
+    display: inline-block;
+    margin-top:20px;
+    cursor: pointer;
+    text-align: center;
+}
+.buy-ticket:hover{
+    background-color: #757575;
+    color: black;
+}
+/* MODAL */
+.modal-container
+{
+    background-color: white;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    border-radius: 0.6px;
+    /* Khi dong van ho ra 16 px */
+    max-width: calc(100%-32px);
+    animation: modal-animation ease 0.5s;
+}
+.modal
+{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-header
+{   
+   
+    color:white;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 129px;
+    background-color: #009688;
+    display: flex;
+    width: 100%  
+    
+}
+.close-button
+{
+    position: absolute;
+    right:0;
+    color: #fff
+}
+.modal-heading-icon
+{
+    margin-right: 12px;
+    padding: 4px;
+    font-size: 23px;
+    opacity: 0.6;
+}
+.modal-heading-icon:hover
+{
+    opacity: 1;
+}
+    .modal-label
+{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-body
+{
+    padding: 15px
+}
+.modal-input
+{
+    border: 1px solid #ccc;
+   width: 100%;
+   padding: 10px;
+   font-size: 15px;
+   margin-bottom: 24px;
+}
+.modal-pay
+{
+    padding: 12px;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #009688;
+    border: none;
+}
+.modal-pay:hover
+{
+    opacity: 0.6;
+}
+
+.modal-footer
+{
+    padding: 16px;
+    text-align: right;
+}
+.modal-footer a
+{
+    color:#009688;
+}
+.modal-footer a:hover
+{
+    opacity: 0.7;
+}
+.modal.open
+{
+    display: flex;
+}
+/* tao ra animation */
+@keyframes modal-animation {
+    from{
+        opacity: 0.5;
+        transform: translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CONTENT */
+.contact-container
+{
+    margin-top: 50px;
+}
+
+.contact-inf 
+{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: -5px;
+}
+.contact-inf i
+{
+    width: 30px;
+    display: inline-block;
+    
+}
+.contact-inf a
+{
+    color: #101aef;
+    opacity: 0.8;
+}
+.contact-inf a:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+.contact-form
+{
+    font-size: 15px;
+    
+}
+.contact-form .form-ctrl
+{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+
+}
+.input-mesage
+{
+    margin-top: 8px;
+}
+.submit-input
+{
+    background-color: #000;
+    color: white;
+    padding: 12px 18px;
+    float: right ;
+    margin-top: 15px;
+    border: none;
+    /* Bo di trang thai mac dinh duong trinh duyet ap vao */
+    text-align: center;
+}
+.submit-input:hover
+{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.map-img img
+{
+    width: 100%;
+}
+/* FOOTER */
+.footer
+{
+    padding: 64px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer-icon
+{
+    font-size: 40px;
+    opacity: 0.6;
+}
+.copyRight a:hover,
+.footer-icon a:hover
+{
+    opacity: 1;
+    cursor: pointer;
+    color: black;
+}
+.copyRight
+{
+    font-size: 25px;
+    color: rgba(0,0,0,0.4);
+}
+/* END */
+
